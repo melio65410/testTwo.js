@@ -20,9 +20,9 @@
     <script>
         let headText = document.getElementById("headText")
         let img = document.getElementById("mainImg")
-        let name = prompt("ادخل أسمك الأول!");
+        let name = prompt("ادخل أسمك الأول (عربي)");
         let userName = name;
-        let age = prompt(`كم عمر يا ${name}?`);
+        let age = prompt(`كم عمرك يا ${name}? (أرقام انجليزي)`);
         age = Number(age);
         let userAge = age;
 
@@ -33,7 +33,7 @@
         } else if (userAge >= 18 && name === "شهد") {
             let psw = Number(prompt("ادخل تاريخ يوم مميز (يوم وشهر بدون فواصل)"));
             let userPsw = psw;
-            if (userPsw === 211) {
+            if (userPsw === 112) {
                 alert("🔥 دخول رايق يسبب حرايق 🎉");
                 alert("بعشقك يا للة");
                 headText.innerText = " ♥️😂 يابت انت مراتي"
