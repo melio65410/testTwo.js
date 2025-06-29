@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <title>مش مهم</title>
+</head>
+
+<body>
+    <h1 style="width: 100%;  text-align: center;" dir="rtl" id="headText"></h1>
+    <br>
+    <div style="text-align: center;">
+        <button class="mainBtn" onclick="window.location.reload()">أعادة تحميل</button>
+    </div>
+    <br>
+    <!-- <img id="mainImg" alt=""> -->
+    <div id="mainImg" style="width: 100%;  text-align: center;"></div>
+
+    <script>
+        let headText = document.getElementById("headText")
+        let img = document.getElementById("mainImg")
+        let name = prompt("ادخل أسمك الأول!");
+        let userName = name;
+        let age = prompt(`كم عمر يا ${name}?`);
+        age = Number(age);
+        let userAge = age;
+
+        if (isNaN(age) || !name) {
+            alert("⚠️ من فضلك أدخل رقم صحيح أو الاسم الاول");
+            headText.innerText = "روح ناول لأمك بصلة 🧅";
+            img.innerHTML = "<img src='onion.gif' alt='img'>"
+        } else if (userAge >= 18 && name === "شهد") {
+            let psw = Number(prompt("ادخل تاريخ يوم مميز (يوم وشهر بدون فواصل)"));
+            let userPsw = psw;
+            if (userPsw === 211) {
+                alert("🔥 دخول رايق يسبب حرايق 🎉");
+                alert("بعشقك يا للة");
+                headText.innerText = " ♥️😂 يابت انت مراتي"
+                img.innerHTML = "<img src='img.jpeg' alt='img'>"
+            } else {
+                headText.innerText = "🤬انت مش شهد اطلع برة"
+                img.innerHTML = "<img src='cat.gif' alt='img'>"
+            }
+        } else if (userAge >= 18 && (name === "يسو" || name === "ياسين" || name === "ياسو")) {
+            let psw = Number(prompt("ادخل تاريخ يوم مميز (يوم وشهر بدون فواصل)"));
+            let userPsw = psw;
+            if (userPsw === 1212) {
+                alert("✅ مسموح بالدخول");
+                headText.innerText = "♥️يارب تتجوز وتنجح برضه زي ما قلت لخلود "
+                img.innerHTML = "<img src='all.gif' alt='img'>"
+            } else {
+                headText.innerText = "🤬انت مش يسو اطلع برة"
+                img.innerHTML = "<img src='cat.gif' alt='img'>"
+            }
+        } else if (userAge >= 18 && (name === "خلود" || name === "خوخة")) {
+            alert("✅ مسموح بالدخول");
+            img.innerHTML = "<img src='all.gif' alt='img'>"
+            headText.innerText = "♥️ يارب تتجوزي وتنجحي برضه زي ما قلت لياسين"
+        }
+        else if (userAge >= 18) {
+            alert("✅ مسموح بالدخول");
+            headText.innerText = "🤬 أسمك غير مدرج بالنظام اطلع بره"
+            img.innerHTML = "<img src='out.gif' alt='img'>"
+        } else if (userAge < 18) {
+            alert("⛔ غير مسموح بالدخول");
+            headText.innerText = "لسه صغير روح اشرب عصير 🍹";
+            img.innerHTML = "<img src='img2.jpeg' alt='img'>"
+        }
+    </script>
+</body>
+
+</html>

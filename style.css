@@ -1,0 +1,19 @@
+.mainBtn {
+    width: 100px;
+    padding: 0.5rem;
+    font-weight: bold;
+    background-color: burlywood;
+    border: 1px solid transparent;
+    border-radius: 6px;
+    transition: background-color ease 0.2s;
+}
+
+.mainBtn:hover {
+    width: 100px;
+    padding: 0.5rem;
+    font-weight: bold;
+    background-color: transparent;
+    border: 1px solid burlywood;
+    border-radius: 6px;
+    transition: background-color ease 0.2s;
+}
